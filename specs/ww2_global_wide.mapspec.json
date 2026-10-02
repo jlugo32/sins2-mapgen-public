@@ -1,0 +1,1104 @@
+{
+  "constraints": {
+    "max_bodies_per_star": 150,
+    "notes": [
+      "asymmetric by design: REGION_ADVANTAGE_STACK is expected, not a fault",
+      "Axis hold metal and interior lines; their crystal is behind a gated oil field",
+      "Britain is reachable only by wormhole; the USA is furthest from every front",
+      "each neutral sits on a route whose alignment opens or closes a front"
+    ],
+    "symmetric": false,
+    "total_planets": 111
+  },
+  "layout": {
+    "radius_scale": 1.8,
+    "shape": "clusters"
+  },
+  "links": [
+    {
+      "chokepoint": false,
+      "from_zone": "germany",
+      "lane": "normal",
+      "to_zone": "f_alps",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_alps",
+      "lane": "normal",
+      "to_zone": "italy",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "germany",
+      "lane": "normal",
+      "to_zone": "f_eastern",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_eastern",
+      "lane": "normal",
+      "to_zone": "ussr",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "germany",
+      "lane": "normal",
+      "to_zone": "f_baltic",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_baltic",
+      "lane": "normal",
+      "to_zone": "sweden",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "ussr",
+      "lane": "normal",
+      "to_zone": "f_finland",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_finland",
+      "lane": "normal",
+      "to_zone": "sweden",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "ussr",
+      "lane": "normal",
+      "to_zone": "f_caucasus_road",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_caucasus_road",
+      "lane": "normal",
+      "to_zone": "turkey",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "spain",
+      "lane": "normal",
+      "to_zone": "f_gibraltar",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_gibraltar",
+      "lane": "normal",
+      "to_zone": "italy",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "italy",
+      "lane": "normal",
+      "to_zone": "f_aegean",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_aegean",
+      "lane": "normal",
+      "to_zone": "turkey",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "japan",
+      "lane": "normal",
+      "to_zone": "f_east_indies_sea",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "f_east_indies_sea",
+      "lane": "normal",
+      "to_zone": "siam",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "germany",
+      "lane": "wormhole",
+      "to_zone": "x_channel",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_channel",
+      "lane": "normal",
+      "to_zone": "britain",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "usa",
+      "lane": "wormhole",
+      "to_zone": "x_atlantic_north",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_atlantic_north",
+      "lane": "normal",
+      "to_zone": "britain",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "usa",
+      "lane": "wormhole",
+      "to_zone": "x_atlantic_murmansk",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_atlantic_murmansk",
+      "lane": "normal",
+      "to_zone": "ussr",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "usa",
+      "lane": "wormhole",
+      "to_zone": "x_pacific_midway",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_pacific_midway",
+      "lane": "normal",
+      "to_zone": "japan",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "japan",
+      "lane": "wormhole",
+      "to_zone": "x_pacific_solomons",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_pacific_solomons",
+      "lane": "normal",
+      "to_zone": "siam",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "usa",
+      "lane": "wormhole",
+      "to_zone": "x_pacific_philippines",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_pacific_philippines",
+      "lane": "normal",
+      "to_zone": "siam",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "italy",
+      "lane": "wormhole",
+      "to_zone": "x_med_north_africa",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "x_med_north_africa",
+      "lane": "normal",
+      "to_zone": "spain",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "germany",
+      "lane": "normal",
+      "to_zone": "oil_ploiesti",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "ussr",
+      "lane": "normal",
+      "to_zone": "oil_caucasus",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "turkey",
+      "lane": "normal",
+      "to_zone": "oil_persian_gulf",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "britain",
+      "lane": "normal",
+      "to_zone": "oil_persian_gulf",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "siam",
+      "lane": "normal",
+      "to_zone": "oil_east_indies",
+      "via_contested_planets": 0
+    }
+  ],
+  "meta": {
+    "description": "Three theaters, ten powers, four oil fields. Asymmetric on purpose.",
+    "display_name": "WW2: Global (Wide Fronts)",
+    "name": "ww2_global_wide",
+    "players": 10,
+    "seed": 1939,
+    "teams": 0
+  },
+  "zones": [
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "germany",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 0,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 7,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "metal",
+        "metal",
+        "balanced",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "italy",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 1,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 1
+      },
+      "planet_count": 4,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "ussr",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 3,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 2
+      },
+      "planet_count": 8,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "L",
+        "M",
+        "M",
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "metal",
+        "metal",
+        "balanced",
+        "balanced",
+        "metal",
+        "balanced"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "turkey",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 6,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 3
+      },
+      "planet_count": 4,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "balanced",
+        "metal",
+        "balanced"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "sweden",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 8,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 4
+      },
+      "planet_count": 4,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "spain",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 5,
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 5
+      },
+      "planet_count": 4,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "balanced",
+        "metal",
+        "balanced"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "usa",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 4,
+      "placement": {
+        "cluster": "atlantic",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 7,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "L",
+        "M",
+        "M",
+        "M",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "metal",
+        "balanced",
+        "balanced",
+        "balanced",
+        "balanced"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "britain",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 2,
+      "placement": {
+        "cluster": "atlantic",
+        "kind": "cluster",
+        "slot": 1
+      },
+      "planet_count": 5,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "balanced",
+        "balanced",
+        "balanced",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "japan",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 7,
+      "placement": {
+        "cluster": "pacific",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 5,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "S",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "metal",
+        "balanced",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "siam",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 9,
+      "placement": {
+        "cluster": "pacific",
+        "kind": "cluster",
+        "slot": 1
+      },
+      "planet_count": 4,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M",
+        "S",
+        "S"
+      ],
+      "slot_biases": [
+        "balanced",
+        "metal",
+        "balanced"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_alps",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "germany",
+          "italy"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_eastern",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "germany",
+          "ussr"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_baltic",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "germany",
+          "sweden"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_finland",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "ussr",
+          "sweden"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_caucasus_road",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "ussr",
+          "turkey"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_gibraltar",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "spain",
+          "italy"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_aegean",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "italy",
+          "turkey"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "f_east_indies_sea",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "japan",
+          "siam"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_channel",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "germany",
+          "britain"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_atlantic_north",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "usa",
+          "britain"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_atlantic_murmansk",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "usa",
+          "ussr"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_pacific_midway",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "usa",
+          "japan"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_pacific_solomons",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "japan",
+          "siam"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_pacific_philippines",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "usa",
+          "siam"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "x_med_north_africa",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "italy",
+          "spain"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 1,
+      "gated": true,
+      "id": "oil_ploiesti",
+      "internal_links": "loop",
+      "kind": "core",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "germany",
+          "turkey"
+        ]
+      },
+      "planet_count": 3,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "M",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 1,
+      "gated": true,
+      "id": "oil_caucasus",
+      "internal_links": "loop",
+      "kind": "core",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "ussr",
+          "turkey"
+        ]
+      },
+      "planet_count": 5,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L",
+        "M",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 2,
+      "gated": true,
+      "id": "oil_persian_gulf",
+      "internal_links": "loop",
+      "kind": "core",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "turkey",
+          "britain"
+        ]
+      },
+      "planet_count": 5,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 1,
+      "gated": true,
+      "id": "oil_east_indies",
+      "internal_links": "loop",
+      "kind": "core",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "siam",
+          "japan"
+        ]
+      },
+      "planet_count": 5,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L",
+        "M",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "partisans_europe",
+      "internal_links": "tree",
+      "kind": "pirate",
+      "loot": "none",
+      "npc": "pirate",
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 5,
+      "resource_bias": "none",
+      "size_tiers": []
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "partisans_pacific",
+      "internal_links": "tree",
+      "kind": "pirate",
+      "loot": "none",
+      "npc": "pirate",
+      "placement": {
+        "cluster": "pacific",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 2,
+      "resource_bias": "none",
+      "size_tiers": []
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "partisans_atlantic",
+      "internal_links": "tree",
+      "kind": "pirate",
+      "loot": "none",
+      "npc": "pirate",
+      "placement": {
+        "cluster": "atlantic",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 1,
+      "resource_bias": "none",
+      "size_tiers": []
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "neutrals_europe",
+      "internal_links": "tree",
+      "kind": "filler",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "cluster": "europe",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 8,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S",
+        "M",
+        "S",
+        "M",
+        "S",
+        "S",
+        "M",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "neutrals_pacific",
+      "internal_links": "tree",
+      "kind": "filler",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "cluster": "pacific",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 5,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S",
+        "M",
+        "S",
+        "S",
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "neutrals_atlantic",
+      "internal_links": "tree",
+      "kind": "filler",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "cluster": "atlantic",
+        "kind": "cluster",
+        "slot": 0
+      },
+      "planet_count": 4,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M",
+        "S",
+        "S",
+        "M"
+      ]
+    }
+  ]
+}

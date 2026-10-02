@@ -1,0 +1,447 @@
+{
+  "_about": {
+    "decisions": "BRIEF.md \u00a70 Resources",
+    "game_dir": "D:\\Games\\Sins of a Solar Empire II",
+    "generated_by": "tools/build_fillings.py",
+    "playable_factions": [
+      "advent_loyalist",
+      "advent_rebel",
+      "dlc3_herald",
+      "dlc_trader_loyalist",
+      "trader_loyalist",
+      "trader_rebel",
+      "vasari_loyalist",
+      "vasari_rebel"
+    ],
+    "research_gated": "true = every playable faction needs research to colonize this planet type (entities/*.player planet_types[].colonization_research_prerequisites)",
+    "values": "asteroid counts [min, max] = planet.non_random_* + planet.random_* in unit_file"
+  },
+  "home_bias_pattern": {
+    "note": "home zones with resource_bias 'metal' are metal-leaning: non-home slot k uses pattern[k % 2], so homes mix metal-bias and balanced planets (BRIEF \u00a70 Home fairness)",
+    "pattern": [
+      "metal",
+      "balanced"
+    ]
+  },
+  "roles": {
+    "garrison": {
+      "crystal": [
+        0,
+        0
+      ],
+      "expected_crystal": 0.0,
+      "expected_metal": 0.0,
+      "filling_name": "random_city_planet",
+      "metal": [
+        0,
+        0
+      ],
+      "note": "pure defence: city_planet has 0 metal and 0 crystal but militia_supply 125-135 (entities/city_planet.unit, planet.uniforms). Expensive to take, worthless to hold - what a chokepoint should be. Not reachable through tier x bias, which is resource-based.",
+      "planet_type": "city",
+      "research_gated": false,
+      "unit_file": "entities/city_planet.unit"
+    },
+    "pirate": {
+      "crystal": [
+        0,
+        8
+      ],
+      "expected_crystal": 3.5,
+      "expected_metal": 3.5,
+      "filling_name": "player_home_planet",
+      "metal": [
+        0,
+        8
+      ],
+      "note": "vanilla pirate pattern, 34 uses (e.g. public_agamemnons_bounty node 27)",
+      "ownership": {
+        "npc_filling_name": "pirate"
+      },
+      "planet_type": "(rolled by the game: barren, ice, swamp, volcanic)",
+      "roll": [
+        {
+          "crystal": [
+            3,
+            4
+          ],
+          "entity": "barren_planet",
+          "metal": [
+            3,
+            4
+          ],
+          "planet_type": "barren",
+          "probability": 0.25,
+          "unit_file": "entities/barren_planet.unit"
+        },
+        {
+          "crystal": [
+            6,
+            8
+          ],
+          "entity": "ice_planet",
+          "metal": [
+            0,
+            0
+          ],
+          "planet_type": "ice",
+          "probability": 0.3,
+          "unit_file": "entities/ice_planet.unit"
+        },
+        {
+          "crystal": [
+            3,
+            4
+          ],
+          "entity": "swamp_planet",
+          "metal": [
+            3,
+            4
+          ],
+          "planet_type": "swamp",
+          "probability": 0.15,
+          "unit_file": "entities/swamp_planet.unit"
+        },
+        {
+          "crystal": [
+            0,
+            0
+          ],
+          "entity": "volcanic_planet",
+          "metal": [
+            6,
+            8
+          ],
+          "planet_type": "volcanic",
+          "probability": 0.3,
+          "unit_file": "entities/volcanic_planet.unit"
+        }
+      ]
+    },
+    "player_home": {
+      "crystal": [
+        0,
+        8
+      ],
+      "expected_crystal": 3.5,
+      "expected_metal": 3.5,
+      "filling_name": "player_home_planet",
+      "metal": [
+        0,
+        8
+      ],
+      "note": "vanilla home pattern: ownership.player_index (0-based)",
+      "planet_type": "(rolled by the game: barren, ice, swamp, volcanic)",
+      "roll": [
+        {
+          "crystal": [
+            3,
+            4
+          ],
+          "entity": "barren_planet",
+          "metal": [
+            3,
+            4
+          ],
+          "planet_type": "barren",
+          "probability": 0.25,
+          "unit_file": "entities/barren_planet.unit"
+        },
+        {
+          "crystal": [
+            6,
+            8
+          ],
+          "entity": "ice_planet",
+          "metal": [
+            0,
+            0
+          ],
+          "planet_type": "ice",
+          "probability": 0.3,
+          "unit_file": "entities/ice_planet.unit"
+        },
+        {
+          "crystal": [
+            3,
+            4
+          ],
+          "entity": "swamp_planet",
+          "metal": [
+            3,
+            4
+          ],
+          "planet_type": "swamp",
+          "probability": 0.15,
+          "unit_file": "entities/swamp_planet.unit"
+        },
+        {
+          "crystal": [
+            0,
+            0
+          ],
+          "entity": "volcanic_planet",
+          "metal": [
+            6,
+            8
+          ],
+          "planet_type": "volcanic",
+          "probability": 0.3,
+          "unit_file": "entities/volcanic_planet.unit"
+        }
+      ]
+    },
+    "star": {
+      "filling_name": "random_star",
+      "note": "most-used star filling in vanilla maps (84 nodes, 54 maps)"
+    },
+    "wormhole": {
+      "filling_name": "wormhole_fixture",
+      "note": "vanilla wormhole_fillings.default_wormhole_fixture"
+    }
+  },
+  "tiers": {
+    "L": {
+      "balanced": {
+        "crystal": [
+          6,
+          8
+        ],
+        "filling_name": "random_irradiated_planet",
+        "metal": [
+          6,
+          8
+        ],
+        "planet_type": "irradiated",
+        "research_gated": true,
+        "unit_file": "entities/irradiated_planet.unit"
+      },
+      "crystal": {
+        "crystal": [
+          9,
+          10
+        ],
+        "filling_name": "random_crystalline_planet",
+        "metal": [
+          0,
+          0
+        ],
+        "planet_type": "crystalline",
+        "research_gated": true,
+        "unit_file": "entities/crystalline_planet.unit"
+      },
+      "metal": {
+        "crystal": [
+          0,
+          0
+        ],
+        "filling_name": "random_ferrous_planet",
+        "metal": [
+          9,
+          10
+        ],
+        "planet_type": "ferrous",
+        "research_gated": false,
+        "unit_file": "entities/ferrous_planet.unit"
+      }
+    },
+    "M": {
+      "balanced": {
+        "crystal": [
+          4,
+          6
+        ],
+        "filling_name": "random_desert_planet",
+        "metal": [
+          4,
+          6
+        ],
+        "planet_type": "desert",
+        "research_gated": false,
+        "unit_file": "entities/desert_planet.unit"
+      },
+      "crystal": {
+        "crystal": [
+          6,
+          8
+        ],
+        "filling_name": "random_ice_planet",
+        "metal": [
+          0,
+          0
+        ],
+        "planet_type": "ice",
+        "research_gated": true,
+        "unit_file": "entities/ice_planet.unit"
+      },
+      "metal": {
+        "crystal": [
+          0,
+          0
+        ],
+        "filling_name": "random_volcanic_planet",
+        "metal": [
+          6,
+          8
+        ],
+        "planet_type": "volcanic",
+        "research_gated": true,
+        "unit_file": "entities/volcanic_planet.unit"
+      }
+    },
+    "S": {
+      "balanced": {
+        "crystal": [
+          3,
+          4
+        ],
+        "filling_name": "random_barren_planet",
+        "metal": [
+          3,
+          4
+        ],
+        "planet_type": "barren",
+        "research_gated": false,
+        "unit_file": "entities/barren_planet.unit"
+      },
+      "crystal": {
+        "crystal": [
+          4,
+          6
+        ],
+        "filling_name": "random_oceanic_planet",
+        "metal": [
+          1,
+          2
+        ],
+        "planet_type": "oceanic",
+        "research_gated": true,
+        "unit_file": "entities/oceanic_planet.unit"
+      },
+      "metal": {
+        "crystal": [
+          1,
+          2
+        ],
+        "filling_name": "random_ship_graveyard_planet",
+        "metal": [
+          3,
+          4
+        ],
+        "planet_type": "ship_graveyard",
+        "research_gated": false,
+        "unit_file": "entities/ship_graveyard_planet.unit"
+      }
+    },
+    "XL": {
+      "balanced": {
+        "crystal": [
+          8,
+          10
+        ],
+        "filling_name": "random_gas_giant_planet",
+        "metal": [
+          8,
+          10
+        ],
+        "planet_type": "gas_giant",
+        "research_gated": true,
+        "unit_file": "entities/gas_giant_planet.unit"
+      },
+      "crystal": {
+        "crystal": [
+          9,
+          10
+        ],
+        "filling_name": "random_crystalline_planet",
+        "metal": [
+          0,
+          0
+        ],
+        "planet_type": "crystalline",
+        "research_gated": true,
+        "unit_file": "entities/crystalline_planet.unit"
+      },
+      "metal": {
+        "crystal": [
+          0,
+          0
+        ],
+        "filling_name": "random_ferrous_planet",
+        "metal": [
+          9,
+          10
+        ],
+        "planet_type": "ferrous",
+        "research_gated": false,
+        "unit_file": "entities/ferrous_planet.unit"
+      }
+    }
+  },
+  "verified_filling_names": [
+    "home_ice_planet",
+    "home_swamp_planet",
+    "home_volcanic_planet",
+    "player_home_planet",
+    "random_antimatter_fountain_fixture",
+    "random_asteroid",
+    "random_asteroid_line_cluster",
+    "random_asteroid_point_line_cluster",
+    "random_asteroid_point_line_cluster_weighted",
+    "random_barren_planet",
+    "random_black_hole_star",
+    "random_blue_star",
+    "random_brown_dwarf_planet",
+    "random_city_planet",
+    "random_crystalline_planet",
+    "random_dead_asteroid",
+    "random_debris_field_planet",
+    "random_desert_planet",
+    "random_fair_planet",
+    "random_fair_planet_near_home_planet",
+    "random_ferrous_planet",
+    "random_gas_giant_planet",
+    "random_greenhouse_planet",
+    "random_hive_asteroid",
+    "random_home_ice_volcanic_planet",
+    "random_ice_asteroid",
+    "random_ice_field_fixture",
+    "random_ice_moon_planet",
+    "random_ice_planet",
+    "random_ice_volcanic_planet",
+    "random_impassable_well_fixture",
+    "random_irradiated_planet",
+    "random_magnetic_cloud_fixture",
+    "random_magnetic_planet",
+    "random_moon_planet",
+    "random_moon_planet_weighted",
+    "random_neutron_star",
+    "random_oceanic_planet",
+    "random_orange_star",
+    "random_planet_unweighted",
+    "random_planet_unweighted_near_home_planet",
+    "random_planet_weighted",
+    "random_planet_weighted_near_home_planet",
+    "random_planet_weighted_no_city",
+    "random_plasma_storm_fixture",
+    "random_poor_planet",
+    "random_poor_planet_no_hive",
+    "random_radiation_storm_fixture",
+    "random_red_star",
+    "random_rich_planet",
+    "random_rich_planet_near_home_planet",
+    "random_shattered_planet",
+    "random_ship_graveyard_planet",
+    "random_space_junk_fixture",
+    "random_star",
+    "random_super_rich_planet",
+    "random_swamp_planet",
+    "random_terran_planet",
+    "random_uncolonizable_cloud",
+    "random_uncolonizable_planet",
+    "random_volcanic_moon_planet",
+    "random_volcanic_planet",
+    "random_white_star",
+    "random_yellow_star",
+    "wormhole_fixture"
+  ]
+}

@@ -1,0 +1,10 @@
+# Copy to config.toml and edit paths.
+game_dir   = 'C:\Program Files (x86)\Steam\steamapps\common\Sins2'
+schema_dir = 'C:\dev\refs\sins2modtools\json_schemas'   # official schemas, never copied into this project
+mods_dir   = '%LOCALAPPDATA%\sins2\mods'
+
+[limits]
+warn_bodies_per_star = 102   # largest vanilla single-star map (public_ashred) = proven-safe size
+max_bodies_per_star  = 150   # hard stop
+max_stars            = 10    # random_map_generator solar_system_count max
+max_region_hop_spread = 2    # max hop spread between home regions and the nearest gate / contested zone

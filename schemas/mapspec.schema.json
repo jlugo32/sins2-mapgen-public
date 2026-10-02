@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sins2-mapgen.local/mapspec.schema.json",
+  "title": "MapSpec",
+  "description": "sins2-mapgen intermediate representation. Abstract roles and tiers only: no filling_names, ids or coordinates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "layout", "zones", "links", "constraints"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "display_name", "description", "players", "teams", "seed"],
+      "properties": {
+        "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]{1,62}$"},
+        "display_name": {"type": "string", "minLength": 1, "maxLength": 80},
+        "description": {"type": "string", "maxLength": 400},
+        "players": {"type": "integer", "minimum": 2, "maximum": 10},
+        "teams": {"type": "integer", "minimum": 0, "maximum": 5},
+        "seed": {"type": "integer"}
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shape", "radius_scale"],
+      "properties": {
+        "shape": {"enum": ["ring", "clusters", "concentric"],
+                  "description": "Only shapes the compiler can build are listed. line/grid/twin were removed: an enum must not promise behaviour that does not exist."},
+        "radius_scale": {"type": "number", "minimum": 0.5, "maximum": 2.0},
+        "band_radii": {
+          "description": "concentric layout: one radius per band, as a fraction of the outer radius, outermost first (e.g. [1.0, 0.7, 0.4]).",
+          "type": "array", "items": {"type": "number"}
+        },
+        "band_offsets": {
+          "description": "concentric layout: per-band angular offset in steps (0.5 puts a band half a step round, between the vertices of the band outside it). Same length as band_radii.",
+          "type": "array", "items": {"type": "number"}
+        }
+      }
+    },
+    "zones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/zone"}
+    },
+    "links": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/link"}
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_planets", "max_bodies_per_star", "symmetric", "notes"],
+      "properties": {
+        "total_planets": {"type": "integer", "minimum": 1},
+        "max_bodies_per_star": {"type": "integer", "minimum": 1},
+        "symmetric": {"type": "boolean"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rifts": {"type": "integer", "minimum": 0},
+        "wormhole_pairs": {"type": "integer", "minimum": 0}
+      }
+    }
+  },
+  "$defs": {
+    "tier": {"enum": ["S", "M", "L", "XL"]},
+    "zone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "planet_count", "size_tiers", "resource_bias", "internal_links", "placement",
+                   "gated", "chokepoints", "loot", "npc"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,40}$"},
+        "kind": {"enum": ["home", "border", "contested", "core", "filler", "pirate", "custom"]},
+        "owner_player": {"type": "integer", "minimum": 0, "maximum": 9},
+        "planet_count": {"type": "integer", "minimum": 1},
+        "size_tiers": {
+          "description": "One tier per planet. Home zones: one per non-home planet (planet_count - 1). Core zones: inner planets first, then chokepoints.",
+          "type": "array",
+          "items": {"$ref": "#/$defs/tier"}
+        },
+        "resource_bias": {"enum": ["metal", "crystal", "balanced", "none"]},
+        "slot_biases": {
+          "description": "Optional per-planet bias, one per size_tiers entry, overriding resource_bias. Lets one zone mix biases, e.g. a core of one balanced XL (gas giant) plus crystal-bias L planets.",
+          "type": "array",
+          "items": {"enum": ["metal", "crystal", "balanced"]}
+        },
+        "internal_links": {"enum": ["tree", "loop", "dense"]},
+        "placement": {"$ref": "#/$defs/placement"},
+        "gated": {"type": "boolean"},
+        "chokepoints": {"type": "integer", "minimum": 0},
+        "chokepoint_role": {"enum": ["default", "garrison"],
+                            "description": "What a gated zone's chokepoint planets are. 'garrison' makes them city planets: no metal, no crystal, heavy militia - expensive to take, worthless to hold."},
+        "loot": {"enum": ["none", "small", "large"]},
+        "npc": {"enum": ["none", "pirate"],
+                "description": "Militia is deliberately absent: vanilla never assigns militia ownership to a node. Every planet already carries militia defenders through its fixture's militia_supply."}
+      }
+    },
+    "placement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["ring_slot", "cluster", "band", "center", "between", "gap"]},
+        "band": {"type": "integer", "minimum": 0,
+                 "description": "concentric layout: which band, indexing layout.band_radii"},
+        "cluster": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,40}$",
+                    "description": "clusters layout: which theater this zone belongs to"},
+        "slot": {"type": "integer", "minimum": 0},
+        "zones": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from_zone", "to_zone", "lane", "via_contested_planets", "chokepoint"],
+      "properties": {
+        "from_zone": {"type": "string"},
+        "to_zone": {"type": "string"},
+        "lane": {"enum": ["normal", "wormhole"]},
+        "via_contested_planets": {"type": "integer", "minimum": 0, "maximum": 0,
+                                  "description": "Reserved. Step 2 expresses contested planets as 'contested' zones."},
+        "chokepoint": {"type": "boolean"}
+      }
+    }
+  }
+}

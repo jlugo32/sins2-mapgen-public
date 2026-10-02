@@ -1,0 +1,68 @@
+{
+  "constraints": {
+    "max_bodies_per_star": 150,
+    "notes": [
+      "no wormholes, no gated zone: a short open-field duel",
+      "every region touches two border fields, so no region is cornered"
+    ],
+    "symmetric": true,
+    "total_planets": 30
+  },
+  "layout": {
+    "radius_scale": 0.8,
+    "shape": "ring"
+  },
+  "links": [
+    {"chokepoint": false, "from_zone": "home_0", "lane": "normal", "to_zone": "border_0", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "border_0", "lane": "normal", "to_zone": "home_1", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "home_1", "lane": "normal", "to_zone": "border_1", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "border_1", "lane": "normal", "to_zone": "home_2", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "home_2", "lane": "normal", "to_zone": "border_2", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "border_2", "lane": "normal", "to_zone": "home_3", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "home_3", "lane": "normal", "to_zone": "border_3", "via_contested_planets": 0},
+    {"chokepoint": false, "from_zone": "border_3", "lane": "normal", "to_zone": "home_0", "via_contested_planets": 0}
+  ],
+  "meta": {
+    "description": "Four empires, one star, nowhere to hide.",
+    "display_name": "Four Corners",
+    "name": "four_corners",
+    "players": 4,
+    "seed": 7,
+    "teams": 0
+  },
+  "zones": [
+    {"chokepoints": 0, "gated": false, "id": "home_0", "internal_links": "loop", "kind": "home", "loot": "none",
+     "npc": "none", "owner_player": 0, "placement": {"kind": "ring_slot", "slot": 0}, "planet_count": 5,
+     "resource_bias": "metal", "size_tiers": ["L", "M", "S", "S"],
+     "slot_biases": ["metal", "balanced", "metal", "balanced"]},
+    {"chokepoints": 0, "gated": false, "id": "home_1", "internal_links": "loop", "kind": "home", "loot": "none",
+     "npc": "none", "owner_player": 1, "placement": {"kind": "ring_slot", "slot": 1}, "planet_count": 5,
+     "resource_bias": "metal", "size_tiers": ["L", "M", "S", "S"],
+     "slot_biases": ["metal", "balanced", "metal", "balanced"]},
+    {"chokepoints": 0, "gated": false, "id": "home_2", "internal_links": "loop", "kind": "home", "loot": "none",
+     "npc": "none", "owner_player": 2, "placement": {"kind": "ring_slot", "slot": 2}, "planet_count": 5,
+     "resource_bias": "metal", "size_tiers": ["L", "M", "S", "S"],
+     "slot_biases": ["metal", "balanced", "metal", "balanced"]},
+    {"chokepoints": 0, "gated": false, "id": "home_3", "internal_links": "loop", "kind": "home", "loot": "none",
+     "npc": "none", "owner_player": 3, "placement": {"kind": "ring_slot", "slot": 3}, "planet_count": 5,
+     "resource_bias": "metal", "size_tiers": ["L", "M", "S", "S"],
+     "slot_biases": ["metal", "balanced", "metal", "balanced"]},
+    {"chokepoints": 0, "gated": false, "id": "border_0", "internal_links": "tree", "kind": "border", "loot": "none",
+     "npc": "none", "placement": {"kind": "between", "zones": ["home_0", "home_1"]}, "planet_count": 1,
+     "resource_bias": "crystal", "size_tiers": ["M"]},
+    {"chokepoints": 0, "gated": false, "id": "border_1", "internal_links": "tree", "kind": "border", "loot": "none",
+     "npc": "none", "placement": {"kind": "between", "zones": ["home_1", "home_2"]}, "planet_count": 1,
+     "resource_bias": "crystal", "size_tiers": ["M"]},
+    {"chokepoints": 0, "gated": false, "id": "border_2", "internal_links": "tree", "kind": "border", "loot": "none",
+     "npc": "none", "placement": {"kind": "between", "zones": ["home_2", "home_3"]}, "planet_count": 1,
+     "resource_bias": "crystal", "size_tiers": ["M"]},
+    {"chokepoints": 0, "gated": false, "id": "border_3", "internal_links": "tree", "kind": "border", "loot": "none",
+     "npc": "none", "placement": {"kind": "between", "zones": ["home_3", "home_0"]}, "planet_count": 1,
+     "resource_bias": "crystal", "size_tiers": ["M"]},
+    {"chokepoints": 0, "gated": false, "id": "filler", "internal_links": "tree", "kind": "filler", "loot": "none",
+     "npc": "none", "placement": {"kind": "gap"}, "planet_count": 5, "resource_bias": "balanced",
+     "size_tiers": ["S", "M", "S", "M", "S"]},
+    {"chokepoints": 0, "gated": false, "id": "pirates", "internal_links": "tree", "kind": "pirate", "loot": "none",
+     "npc": "pirate", "placement": {"kind": "gap"}, "planet_count": 1, "resource_bias": "none", "size_tiers": []}
+  ]
+}

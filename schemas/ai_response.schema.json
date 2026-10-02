@@ -1,0 +1,354 @@
+{
+  "$defs": {
+    "link": {
+      "additionalProperties": false,
+      "properties": {
+        "chokepoint": {
+          "type": "boolean"
+        },
+        "from_zone": {
+          "type": "string"
+        },
+        "lane": {
+          "enum": [
+            "normal",
+            "wormhole"
+          ]
+        },
+        "to_zone": {
+          "type": "string"
+        },
+        "via_contested_planets": {
+          "description": "Reserved. Step 2 expresses contested planets as 'contested' zones.",
+          "maximum": 0,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "from_zone",
+        "to_zone",
+        "lane",
+        "via_contested_planets",
+        "chokepoint"
+      ],
+      "type": "object"
+    },
+    "mapspec": {
+      "additionalProperties": false,
+      "description": "sins2-mapgen intermediate representation. Abstract roles and tiers only: no filling_names, ids or coordinates.",
+      "properties": {
+        "constraints": {
+          "additionalProperties": false,
+          "properties": {
+            "max_bodies_per_star": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "symmetric": {
+              "type": "boolean"
+            },
+            "total_planets": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "total_planets",
+            "max_bodies_per_star",
+            "symmetric",
+            "notes"
+          ],
+          "type": "object"
+        },
+        "features": {
+          "additionalProperties": false,
+          "properties": {
+            "rifts": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "wormhole_pairs": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "layout": {
+          "additionalProperties": false,
+          "properties": {
+            "radius_scale": {
+              "maximum": 2.0,
+              "minimum": 0.5,
+              "type": "number"
+            },
+            "shape": {
+              "enum": [
+                "ring",
+                "line",
+                "grid",
+                "clusters",
+                "twin"
+              ]
+            }
+          },
+          "required": [
+            "shape",
+            "radius_scale"
+          ],
+          "type": "object"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/link"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "maxLength": 400,
+              "type": "string"
+            },
+            "display_name": {
+              "maxLength": 80,
+              "minLength": 1,
+              "type": "string"
+            },
+            "name": {
+              "pattern": "^[a-z][a-z0-9_]{1,62}$",
+              "type": "string"
+            },
+            "players": {
+              "maximum": 10,
+              "minimum": 2,
+              "type": "integer"
+            },
+            "seed": {
+              "type": "integer"
+            },
+            "teams": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "display_name",
+            "description",
+            "players",
+            "teams",
+            "seed"
+          ],
+          "type": "object"
+        },
+        "zones": {
+          "items": {
+            "$ref": "#/$defs/zone"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "meta",
+        "layout",
+        "zones",
+        "links",
+        "constraints"
+      ],
+      "title": "MapSpec",
+      "type": "object"
+    },
+    "placement": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "ring_slot",
+            "center",
+            "between",
+            "gap"
+          ]
+        },
+        "slot": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "zones": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "type": "object"
+    },
+    "tier": {
+      "enum": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    "zone": {
+      "additionalProperties": false,
+      "properties": {
+        "chokepoints": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "gated": {
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_]{0,40}$",
+          "type": "string"
+        },
+        "internal_links": {
+          "enum": [
+            "tree",
+            "loop",
+            "dense"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "home",
+            "border",
+            "contested",
+            "core",
+            "filler",
+            "pirate",
+            "custom"
+          ]
+        },
+        "loot": {
+          "enum": [
+            "none",
+            "small",
+            "large"
+          ]
+        },
+        "npc": {
+          "description": "Militia is deliberately absent: vanilla never assigns militia ownership to a node. Every planet already carries militia defenders through its fixture's militia_supply.",
+          "enum": [
+            "none",
+            "pirate"
+          ]
+        },
+        "owner_player": {
+          "maximum": 9,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "placement": {
+          "$ref": "#/$defs/placement"
+        },
+        "planet_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "resource_bias": {
+          "enum": [
+            "metal",
+            "crystal",
+            "balanced",
+            "none"
+          ]
+        },
+        "size_tiers": {
+          "description": "One tier per planet. Home zones: one per non-home planet (planet_count - 1). Core zones: inner planets first, then chokepoints.",
+          "items": {
+            "$ref": "#/$defs/tier"
+          },
+          "type": "array"
+        },
+        "slot_biases": {
+          "description": "Optional per-planet bias, one per size_tiers entry, overriding resource_bias. Lets one zone mix biases, e.g. a core of one balanced XL (gas giant) plus crystal-bias L planets.",
+          "items": {
+            "enum": [
+              "metal",
+              "crystal",
+              "balanced"
+            ]
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "planet_count",
+        "size_tiers",
+        "resource_bias",
+        "internal_links",
+        "placement",
+        "gated",
+        "chokepoints",
+        "loot",
+        "npc"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "description": "Build this map. Use for every request you can answer.",
+      "properties": {
+        "assumptions": {
+          "description": "Interpretive calls you made that the user did not state. Flavour and design judgement belong here, never in clarifying_questions.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "spec": {
+          "$ref": "#/$defs/mapspec"
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "title": "build",
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "description": "Ask instead of guessing. Only when the answer changes the build and only the user can supply it.",
+      "properties": {
+        "clarifying_questions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "clarifying_questions"
+      ],
+      "title": "ask",
+      "type": "object"
+    }
+  ],
+  "title": "MapSpecResponse"
+}

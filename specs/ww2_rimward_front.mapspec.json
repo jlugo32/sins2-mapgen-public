@@ -1,0 +1,951 @@
+{
+  "constraints": {
+    "max_bodies_per_star": 150,
+    "notes": [
+      "convoys [(0, 3), (2, 5), (4, 7), (6, 9), (8, 1)]",
+      "core access [0, 3, 7]",
+      "major borders [1, 4, 5, 8]"
+    ],
+    "symmetric": true,
+    "total_planets": 100
+  },
+  "layout": {
+    "radius_scale": 1.0,
+    "shape": "ring"
+  },
+  "links": [
+    {
+      "chokepoint": false,
+      "from_zone": "home_0",
+      "lane": "normal",
+      "to_zone": "border_0",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_0",
+      "lane": "normal",
+      "to_zone": "home_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_1",
+      "lane": "normal",
+      "to_zone": "border_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_1",
+      "lane": "normal",
+      "to_zone": "home_2",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_2",
+      "lane": "normal",
+      "to_zone": "border_2",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_2",
+      "lane": "normal",
+      "to_zone": "home_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_3",
+      "lane": "normal",
+      "to_zone": "border_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_3",
+      "lane": "normal",
+      "to_zone": "home_4",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_4",
+      "lane": "normal",
+      "to_zone": "border_4",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_4",
+      "lane": "normal",
+      "to_zone": "home_5",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_5",
+      "lane": "normal",
+      "to_zone": "border_5",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_5",
+      "lane": "normal",
+      "to_zone": "home_6",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_6",
+      "lane": "normal",
+      "to_zone": "border_6",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_6",
+      "lane": "normal",
+      "to_zone": "home_7",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_7",
+      "lane": "normal",
+      "to_zone": "border_7",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_7",
+      "lane": "normal",
+      "to_zone": "home_8",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_8",
+      "lane": "normal",
+      "to_zone": "border_8",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_8",
+      "lane": "normal",
+      "to_zone": "home_9",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_9",
+      "lane": "normal",
+      "to_zone": "border_9",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_9",
+      "lane": "normal",
+      "to_zone": "home_0",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_0",
+      "lane": "wormhole",
+      "to_zone": "convoy_0",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "convoy_0",
+      "lane": "normal",
+      "to_zone": "home_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_2",
+      "lane": "wormhole",
+      "to_zone": "convoy_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "convoy_1",
+      "lane": "normal",
+      "to_zone": "home_5",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_4",
+      "lane": "wormhole",
+      "to_zone": "convoy_2",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "convoy_2",
+      "lane": "normal",
+      "to_zone": "home_7",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_6",
+      "lane": "wormhole",
+      "to_zone": "convoy_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "convoy_3",
+      "lane": "normal",
+      "to_zone": "home_9",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_8",
+      "lane": "wormhole",
+      "to_zone": "convoy_4",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "convoy_4",
+      "lane": "normal",
+      "to_zone": "home_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "home_0",
+      "lane": "wormhole",
+      "to_zone": "core",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "home_3",
+      "lane": "wormhole",
+      "to_zone": "core",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": true,
+      "from_zone": "home_7",
+      "lane": "wormhole",
+      "to_zone": "core",
+      "via_contested_planets": 0
+    }
+  ],
+  "meta": {
+    "description": "Ten empires on a ring. Wormhole convoys, a gated core, pirates in the gaps.",
+    "display_name": "WW2: Rimward Front",
+    "name": "ww2_rimward_front",
+    "players": 10,
+    "seed": 42,
+    "teams": 0
+  },
+  "zones": [
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_0",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 0,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 0
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_1",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 1,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 1
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_2",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 2,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 2
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_3",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 3,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 3
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_4",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 4,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 4
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_5",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 5,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 5
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_6",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 6,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 6
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_7",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 7,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 7
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_8",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 8,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 8
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_9",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 9,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 9
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "L",
+        "S"
+      ],
+      "slot_biases": [
+        "metal",
+        "balanced",
+        "metal",
+        "metal",
+        "metal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_0",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_0",
+          "home_1"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_1",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_1",
+          "home_2"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_2",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_2",
+          "home_3"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_3",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_3",
+          "home_4"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_4",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_4",
+          "home_5"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_5",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_5",
+          "home_6"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_6",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_6",
+          "home_7"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_7",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_7",
+          "home_8"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_8",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_8",
+          "home_9"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_9",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_9",
+          "home_0"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "convoy_0",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_0",
+          "home_3"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "convoy_1",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_2",
+          "home_5"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "convoy_2",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_4",
+          "home_7"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "convoy_3",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_6",
+          "home_9"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "convoy_4",
+      "internal_links": "tree",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_8",
+          "home_1"
+        ]
+      },
+      "planet_count": 1,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 3,
+      "gated": true,
+      "id": "core",
+      "internal_links": "loop",
+      "kind": "core",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "center"
+      },
+      "planet_count": 6,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "XL",
+        "L",
+        "L",
+        "L",
+        "L",
+        "L"
+      ],
+      "slot_biases": [
+        "balanced",
+        "crystal",
+        "crystal",
+        "crystal",
+        "crystal",
+        "crystal"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "filler",
+      "internal_links": "tree",
+      "kind": "filler",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "gap"
+      },
+      "planet_count": 12,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "S",
+        "M",
+        "S",
+        "M",
+        "S",
+        "M",
+        "S",
+        "M",
+        "S",
+        "M",
+        "S",
+        "M"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "pirates",
+      "internal_links": "tree",
+      "kind": "pirate",
+      "loot": "none",
+      "npc": "pirate",
+      "placement": {
+        "kind": "gap"
+      },
+      "planet_count": 3,
+      "resource_bias": "none",
+      "size_tiers": []
+    }
+  ]
+}

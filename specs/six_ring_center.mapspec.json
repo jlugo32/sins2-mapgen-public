@@ -1,0 +1,466 @@
+{
+  "constraints": {
+    "max_bodies_per_star": 150,
+    "notes": [
+      "one open contested center reachable directly from every home region, no gating",
+      "borders carry the crystal, homes stay metal-leaning",
+      "center mixes a gas giant with crystal and metal L/M planets as the fought-over prize"
+    ],
+    "symmetric": true,
+    "total_planets": 60
+  },
+  "layout": {
+    "radius_scale": 1.0,
+    "shape": "ring"
+  },
+  "links": [
+    {
+      "chokepoint": false,
+      "from_zone": "home_0",
+      "lane": "normal",
+      "to_zone": "border_0",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_0",
+      "lane": "normal",
+      "to_zone": "home_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_1",
+      "lane": "normal",
+      "to_zone": "border_1",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_1",
+      "lane": "normal",
+      "to_zone": "home_2",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_2",
+      "lane": "normal",
+      "to_zone": "border_2",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_2",
+      "lane": "normal",
+      "to_zone": "home_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_3",
+      "lane": "normal",
+      "to_zone": "border_3",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_3",
+      "lane": "normal",
+      "to_zone": "home_4",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_4",
+      "lane": "normal",
+      "to_zone": "border_4",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_4",
+      "lane": "normal",
+      "to_zone": "home_5",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_5",
+      "lane": "normal",
+      "to_zone": "border_5",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "border_5",
+      "lane": "normal",
+      "to_zone": "home_0",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_0",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_1",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_2",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_3",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_4",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    },
+    {
+      "chokepoint": false,
+      "from_zone": "home_5",
+      "lane": "normal",
+      "to_zone": "center",
+      "via_contested_planets": 0
+    }
+  ],
+  "meta": {
+    "description": "Six empires around a single contested center, open access, no gates.",
+    "display_name": "Ring of Six",
+    "name": "six_ring_center",
+    "players": 6,
+    "seed": 42,
+    "teams": 0
+  },
+  "zones": [
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_0",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 0,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 0
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_1",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 1,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 1
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_2",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 2,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 2
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_3",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 3,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 3
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_4",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 4,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 4
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "home_5",
+      "internal_links": "loop",
+      "kind": "home",
+      "loot": "none",
+      "npc": "none",
+      "owner_player": 5,
+      "placement": {
+        "kind": "ring_slot",
+        "slot": 5
+      },
+      "planet_count": 6,
+      "resource_bias": "metal",
+      "size_tiers": [
+        "L",
+        "M",
+        "M",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_0",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_0",
+          "home_1"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_1",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_1",
+          "home_2"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_2",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_2",
+          "home_3"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_3",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_3",
+          "home_4"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_4",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_4",
+          "home_5"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "border_5",
+      "internal_links": "tree",
+      "kind": "border",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "between",
+        "zones": [
+          "home_5",
+          "home_0"
+        ]
+      },
+      "planet_count": 2,
+      "resource_bias": "crystal",
+      "size_tiers": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "chokepoints": 0,
+      "gated": false,
+      "id": "center",
+      "internal_links": "dense",
+      "kind": "contested",
+      "loot": "none",
+      "npc": "none",
+      "placement": {
+        "kind": "center"
+      },
+      "planet_count": 12,
+      "resource_bias": "balanced",
+      "size_tiers": [
+        "XL",
+        "L",
+        "L",
+        "L",
+        "L",
+        "L",
+        "L",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M"
+      ],
+      "slot_biases": [
+        "balanced",
+        "crystal",
+        "crystal",
+        "crystal",
+        "metal",
+        "metal",
+        "balanced",
+        "crystal",
+        "crystal",
+        "metal",
+        "metal",
+        "balanced"
+      ]
+    }
+  ]
+}

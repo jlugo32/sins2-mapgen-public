@@ -1,0 +1,7 @@
+jsonschema>=4.18
+referencing
+Pillow
+pytest
+anthropic
+python-dotenv
+rich

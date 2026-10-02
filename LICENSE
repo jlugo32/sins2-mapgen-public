@@ -1,0 +1,34 @@
+MIT License
+
+Copyright (c) 2026 jlugo32
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This licence covers the source code in this repository only.
+
+It does NOT cover, and this repository does not redistribute:
+  - Stardock's Sins of a Solar Empire II game files, or any file copied out of a
+    game install into data/reference/ (git-ignored);
+  - the official sins2modtools JSON schemas, which you clone yourself and
+    reference by path via schema_dir in config.toml.
+
+BVisagie/sins2-mapmaker (AGPL-3.0) was consulted as a reference only. No code from
+it was copied into this project.
